@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 2815042376450268319}
   - component: {fileID: 2815042376450268316}
   m_Layer: 5
-  m_Name: DataCanvas-LOTSA-INPUT
+  m_Name: DataCanvas-LOTSA-INPUTS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

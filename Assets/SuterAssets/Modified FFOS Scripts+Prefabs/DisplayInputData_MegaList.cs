@@ -5,7 +5,7 @@ using UnityEngine.XR;
 using TMPro;
 
 [RequireComponent(typeof(InputData))]
-public class DisplayInputData : MonoBehaviour
+public class DisplayInputData_MegaList : MonoBehaviour
 {
     public TextMeshProUGUI leftGripDisplay;
     public TextMeshProUGUI leftGripBoolDisplay;
