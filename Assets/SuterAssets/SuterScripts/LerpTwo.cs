@@ -6,11 +6,17 @@ public class LerpTwo : MonoBehaviour
 {
     public Vector3 targetRotation;
     public Transform startTransform;
-    public Transform EndTransform;
+    public Transform endTransform;
+    public Quaternion startQuat;
+    public Quaternion endQuat;
 
     void Start()
     {
         //targetRotation = EndTransform;
+        startQuat = startTransform.gameObject.transform.rotation;
+        endQuat = endTransform.gameObject.transform.rotation;
+        targetRotation = endQuat.eulerAngles;
+        Debug.Log("tr: " + targetRotation);
         StartCoroutine(LerpFunction(Quaternion.Euler(targetRotation), 5));
     }
 
