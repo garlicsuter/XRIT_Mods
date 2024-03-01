@@ -30,15 +30,15 @@ public class SocketHelper : MonoBehaviour
 
     public void Update()
     {
-        ////if grip is released (becomes false) AND inRange == true, then run EasePlease()
-        //if (_inputData._leftController.TryGetFeatureValue(CommonUsages.gripButton, out bool leftGripButtonOut))
-        //{
-        //    //Debug.Log("leftGripButtonOut: " + leftGripButtonOut);
-        //    if(leftGripButtonOut == false && inRange == true && grabbedSomething == true)
-        //    {
-        //        Debug.Log("EasePlease???");
-        //    }
-        //}
+        //if grip is released (becomes false) AND inRange == true, then run EasePlease()
+        if (_inputData._leftController.TryGetFeatureValue(CommonUsages.gripButton, out bool leftGripButtonOut))
+        {
+            //Debug.Log("leftGripButtonOut: " + leftGripButtonOut);
+            if (leftGripButtonOut == false && inRange == true && grabbedSomething == true)
+            {
+                Debug.Log("Should we run EasePlease?");
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -75,9 +75,9 @@ public class SocketHelper : MonoBehaviour
 
         while (isEasing == true)
         {
-            Debug.Log("Running EasePlease");
+            Debug.Log("Running EasePlease w/ isEasing == true");
             snapDuration -= Time.deltaTime;
-            Debug.Log("snapDuration: " + snapDuration);
+            //Debug.Log("snapDuration: " + snapDuration);
             if(snapDuration <= 0.0f)
             {
                 isEasing = false;
@@ -105,7 +105,7 @@ public class SocketHelper : MonoBehaviour
     {
         if (inRange == true && grabbedSomething == true)
                 {
-                    Debug.Log("EasePlease??? " + "and grabbedSomething: " + grabbedSomething);
+                    Debug.Log("EasePlease: " + "and grabbedSomething: " + grabbedSomething);
                     EasePlease();
                 }
             grabbedSomething = false;
