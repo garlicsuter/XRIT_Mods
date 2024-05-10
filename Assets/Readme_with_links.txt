@@ -15,3 +15,6 @@ https://assetstore.unity.com/packages/2d/textures-materials/lowpoly-textures-pac
 
 Free Stylized Skybox by Yuki2022
 https://assetstore.unity.com/packages/2d/textures-materials/sky/free-stylized-skybox-212257
+
+VR Hands (animated) from Justin P Barnett's YouTube video:
+https://www.youtube.com/watch?v=DxKWq7z4Xao&t=22s
